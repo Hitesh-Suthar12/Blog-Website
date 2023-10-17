@@ -1,0 +1,183 @@
+/* ***********Body********** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(238, 237, 237);
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    max-width: 80vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* *********** Header ********** */
+
+.header_container {
+    /* border: 2px solid black; */
+    margin-bottom: 2.5rem;
+}
+
+.header_title {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-style: unset;
+    text-align: center;
+}
+
+.header_discription {
+    max-width: 600px;
+    text-align: center;
+    color: rgb(97, 90, 90);
+    margin: 0 auto;
+}
+
+/* *********** card Body ********** */
+.main_container {
+    display: grid;
+    gap: 1.5rem;
+    /* har row me 4 column honge */
+    /* grid-template-columns: repeat(1, 1fr); */
+
+    /* using grid auto-fill method by providing min and max size */
+    /* auto size |  minimun size and maximun size |       */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
+
+    /* 
+    If you want all tracks to be a fixed size (e.g., 200px wide), you can use grid-template-columns: repeat(auto-fill, 200px);.
+
+    If you want the tracks to be flexible and distribute the available space evenly,     you can use grid-template-columns: repeat(auto-fill, 1fr);.
+    */
+}
+
+/* @media (min-width:600px) {
+    .main_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width:950px) {
+    .main_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width:1300px) {
+    .main_container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+} */
+
+/* *********** 1st card Body ********** */
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(153, 153, 153);
+    border-radius: 5px;
+}
+
+.card_image_container {
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+}
+
+.card_image {
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0.2rem 0.2rem;
+    border-radius: 5px;
+}
+
+.card_title_container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card_container:hover .card_image {
+    transform: scale(1.03);
+    transition-duration: 100ms;
+    border-radius: 0.5rem;
+}
+
+.card_title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(59, 59, 59);
+}
+
+.card_title_anchor:hover .card_title {
+    color: rgb(68, 68, 160);
+}
+
+.card_discription {
+    color: rgb(167, 152, 152);
+    font-size: 1rem;
+}
+
+.card_footer_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    align-items: center;
+}
+
+.author_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author_avtar_container {
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(94, 94, 94);
+    border-radius: 50%;
+    background-color: rgb(155, 154, 154);
+}
+
+.author_info_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.author_info_heading {
+    color: rgb(27, 68, 192);
+}
+
+.author_info_date {
+    color: rgb(138, 134, 134);
+    font-size: 0.8rem;
+}
+
+.card_tag_container {
+    font-size: 0.8rem;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 2px;
+    line-height: 1.2rem;
+    padding: 0.25rem 0.25rem;
+    color: rgb(119, 117, 117);
+}
